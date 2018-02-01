@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,39 +19,32 @@
             android:layout_alignParentLeft="true"
             android:layout_margin="16dp"
             app:srcCompat="@drawable/ic_up_arrow"
-            tools:ignore="VectorDrawableCompat" />
+            tools:ignore="VectorDrawableCompat"
+            android:id="@+id/imageView" />
 
         <TextView
             android:id="@+id/txtfragment_song"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_toLeftOf="@id/txtfragment_center"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
             android:text="Havana"
             android:textAlignment="center"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textColor="#fff"
-
-            />
-        <TextView
-            android:id="@+id/txtfragment_center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center_vertical"
-            android:text=" • "
-            android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textColor="#fff"
-
-            />
+            android:textColor="#fff" />
 
         <TextView
             android:id="@+id/txtfragment_album"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_toRightOf="@id/txtfragment_center"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/imageView2"
+            android:layout_toStartOf="@+id/imageView2"
             android:gravity="center_vertical"
             android:text="Camila Cabello"
             android:textAlignment="center"
@@ -63,6 +57,8 @@
             android:layout_alignParentRight="true"
             android:layout_margin="16dp"
             app:srcCompat="@drawable/ic_play"
-            tools:ignore="VectorDrawableCompat" />
+            tools:ignore="VectorDrawableCompat"
+            android:id="@+id/imageView2" />
     </RelativeLayout>
 </FrameLayout>
+

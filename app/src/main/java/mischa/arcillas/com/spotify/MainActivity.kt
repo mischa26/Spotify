@@ -1,12 +1,15 @@
 package mischa.arcillas.com.spotify
 
+import android.app.Fragment
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.widget.LinearLayout
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), SongClickListener {
+
+    var songFragment: SongFragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +32,18 @@ class MainActivity : AppCompatActivity() {
         users.add(Song("Whiskey", "Maroon 5 ft. SZA", " • Red Pill Blues"))
 
 
-        var adapter = SongAdapter(users)
+        var adapter = SongAdapter(users,this)
         rv.adapter = adapter
+
+        songFragment = SongFragment.newInstance(users.get(0))
+
+        supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.mSongLayout, songFragment,"MySongFragment").commit();
+
+    }
+
+    override fun onSongClick(song: Song) {
+    songFragment?.change(song.spotifyTitle, song.spotifySinger)
     }
 }

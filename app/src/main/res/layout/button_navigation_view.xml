@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="70dp"
     android:background="#444444"
-    tools:context="mischa.arcillas.com.spotify.Song_Fragment">
+    tools:context="mischa.arcillas.com.spotify.SongFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout

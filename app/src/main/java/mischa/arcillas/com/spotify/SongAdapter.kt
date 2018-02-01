@@ -12,7 +12,7 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
 
-class SongAdapter (val songList: ArrayList<Song>) : RecyclerView.Adapter<SongAdapter.ViewHolder>() {
+class SongAdapter (val songList: ArrayList<Song>, val listener: SongClickListener) : RecyclerView.Adapter<SongAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
         holder?.song?.text = songList[position].spotifyTitle
@@ -22,7 +22,7 @@ class SongAdapter (val songList: ArrayList<Song>) : RecyclerView.Adapter<SongAda
 
             holder.song.setTextColor(Color.parseColor("#1DB853"))
 
-
+            listener.onSongClick(songList[position])
         }
 
     }

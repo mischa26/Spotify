@@ -25,6 +25,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/recyclerView1"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/recyclerView1"
                 app:srcCompat="@drawable/ic_back"
                 layout:ignore="VectorDrawableCompat" />
 
@@ -82,14 +85,12 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="75dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="57dp">
+            android:layout_marginBottom="57dp"
+            android:id="@+id/mSongLayout">
 
-            <include
-                layout="@layout/fragment_song"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+
         </FrameLayout>
 
         <FrameLayout
@@ -98,6 +99,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
+
 
             <include
                 layout="@layout/button_navigation_view"
